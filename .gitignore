@@ -1,0 +1,13 @@
+Node modules
+node_modules/
+
+Logs
+logs/
+
+#Rough Text
+rough.js
+
+dotenv environment variables
+.env
+.env.local
+.env.*.localwh

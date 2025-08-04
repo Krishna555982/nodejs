@@ -1,0 +1,116 @@
+VARIABLES------------------------------
+
+by using the var keyword we can redeclare the variable and re assign value with same
+by using the let keyword we cant redeclare the variable with same name but we can re assign the value
+by using the const variable we cant redeclare variable and we cant reassign the value
+
+OBJECTS--------------------------------
+to create an object we use  { } and give instructions
+
+
+#Deep Copy:-deep copy will be effected where shallow copy will not be effected
+
+
+Operatores----------------------------
++ addition
+- Subtration
+* multiplication
+= equal
+== compare the values
+===  strictly compare the datatypes
+!= (or) !==  not equal to
+++ incrementation
+-- decrementation
+>=== greater then
+<=== less then
+
+Logical Operatores:
+
+&& Logical AND checks one
+& logical AND checks all
+if we are using && if any condition fails then it will not check rest and it will exit 
+
+|| logical OR
+| logical OR  just like &
+
+! logical NOT  if this values is not there then it will comes in loop
+
+Data Types:
+Number
+String
+Boolean
+Object datatypes
+array
+
+
+if we want to get to know the data type the we can use the "typeof" operator
+
+ARRAYS----------------------------
+arrays is also  variable which can hold more then one value
+ex:-const number =  [1,2,3,4,5,6]
+array  can hold multiple values and we can access those values by refering the index position
+console.log(arr[position])
+* ---Length Method---
+if we want to know the length of array we can use this method
+console.log(arr.length)
+*---Push Method--
+if we want to insert the vue into the last index position we can use push method
+arr.push(value)
+*---pop Method---
+if we want to remove the last index position of array we can use the pop method
+arr.pop()
+*---Unshift Method---
+if we want to add element  into first index position of array we can use "Unshift method "
+arr.unshift(value)
+*---shift method---
+if we want to remove the first element from the array we can use the shift method
+arr.shift()
+*---concat method---
+if we want to combine two single arrays to a single array we can use the contact method
+*---for ea(ch  method---
+if we get multipleof array inside the array based on the satisfyed condition we can able to delete/ add particcular indx position
+*---for method ---
+whenever  we want to use the async and await keyword then we can use below method
+for(let number of arr){
+console.log(numer);
+}
+*---Map Method---
+map method returns new array after performing  function on each element of the array and it does 
+*--- Index of method---)
+by using indexof method we can find the particular element of the index value
+*---Find Method---
+if we want to find the particular matched element inside the array of element we use find method
+*---includesofMethod---
+number.includes(4);
+*---sort Method---
+by using sort method we can able to arrange the numbers by asending or descending order
+*---split method---
+if we want to convert the string into array of elements then we can use split method
+
+---------------------------------------------------------------------------
+#---Functions---
+a function is A block of code designed to perform a particular task. 
+by using functions we can reuse the functions
+when we pass the value into function is calling is called aurgument
+when we pass into function we call it as parameter
+*---annonymous function---
+the function without name is called the annonymous function
+*---firstClass Function---
+it is a kind of ability to pass as a aurgument into a function
+*---nodejs---
+=>node js is a open source cross platform runtime environment
+=>nodejs allows you to run javascript on the server satisfyed
+=>by default nidejs will run in the asyncronus manner
+*--set timeout function---
+if we want to call the function particular time we can use set time out function
+*---set intervel---
+if we want to call the function multiple time we can use set intervel
+--------------------------------------------------------------------
+###'await' expressions are only allowed within async functions and at the top levels of modules.###
+if we want to execute the code in synchronus format async keyword
+---------------------HTTP METHOD-----------------------------------
+POST METHOD:- when we want to insert any data in database we use post method
+GET METHOD:-if we want to recive any data from database  we use get method
+PUT METHOD:- if we want to update mutiple feilds then we can use put method
+PATCH METHOD:- if we want to update one or two feilds we use patch method 
+DELETE METHOD:- if we want to delete any data then we can use delete method
