@@ -114,3 +114,9 @@ GET METHOD:-if we want to recive any data from database  we use get method
 PUT METHOD:- if we want to update mutiple feilds then we can use put method
 PATCH METHOD:- if we want to update one or two feilds we use patch method 
 DELETE METHOD:- if we want to delete any data then we can use delete method
+Git commands:-
+if we want to know the current branch then we cn use the command "git branch"
+if we want to know the changes in the current branch then "git status"
+if we want to ommit the required files then we can use the "git add (filepath)"
+if we want to commit the code in to the branch then we can use the "git commit -m "Random message" "
+if we want to push the code into the branch then we can use "git push"

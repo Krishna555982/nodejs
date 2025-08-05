@@ -34,4 +34,36 @@ exports.customerUpdate = async(req,res) =>{
     }
 }
 
+exports.gEtDetails = async(req,res) => {
+    try{
+        const getCustomerDeatils = await customersSchema.find({email: req.body.email})
+        console.log("Get Customer Details",getCustomerDeatils)
+        if (getCustomerDeatils)
+        {
+            return getCustomerDeatils
+        }
+        else {
+            return "There is no data with the provided details"
+        }
+    }catch (error) {
+return "internal server error"
+}}
 
+exports.deleteDetails = async(req,res) =>{
+    try {
+        if(req.body.email){
+        const CustomerDeletedDetails = await customersSchema.deleteOne({email: req.body.email})
+        console.log("The data is deleted",CustomerDeletedDetails)
+        if(CustomerDeletedDetails.deletedCount== 1){
+            return res.status(200).json({message:" The Details got Deleted  "})
+        }
+        else{
+            return res.status(404).json({message: "No Data Found"})
+        }
+        }else {
+            return res.status(404).json({message: "Email shuld be Entered" })
+        }
+    } catch (error) {
+        return res.sttus(500).json({message: error})
+    }
+}
