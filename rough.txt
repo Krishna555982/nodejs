@@ -119,7 +119,8 @@ if we want to know the current branch then we cn use the command "git branch"
 if we want to know the changes in the current branch then "git status"
 if we want to ommit the required files then we can use the "git add (filepath)"
 if we want to commit the code in to the branch then we can use the "git commit -m "Random message" "
-if we want to push the code into the branch then we can use "git push"ok
+if we want to push the code into the branch then we can use "git push"
+if we want to create new branch from the one branch we use "git checkout -b <branch name>"
 
 Event loop
 event loop allows node js to perform nonblocking input/ output/operations even if it is single thread data
