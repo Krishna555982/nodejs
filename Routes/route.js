@@ -10,4 +10,8 @@ router.put('/customerUpdate',customerController.customerUpdate)
 router.get('/customerGetDetais',customerController.gEtDetails)
 
 router.delete('/customerDelete',customerController.deleteDetails)
+
+// router.post('/customerSignin',customerController.customerSignin)
+
+router.put('/signinUpdate',customerController.signinUpdate)
 module.exports = router;

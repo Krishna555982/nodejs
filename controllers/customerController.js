@@ -64,6 +64,24 @@ exports.deleteDetails = async(req,res) =>{
             return res.status(404).json({message: "Email shuld be Entered" })
         }
     } catch (error) {
-        return res.sttus(500).json({message: error})
+        return res.status(500).json({message: error})
+    }
+}
+// making the isActive field from false to true
+
+exports.signinUpdate = async (req,res) => {
+    try {
+        if (!req.body.email) {
+        return res.status(400).json({message: "Email is required"})
+        }
+        const customerUpdate = await customersSchema.findOneAndUpdate({email: req.body.email},{$set: {isActive:true}}, {new: true})
+        console.log(customerUpdate)
+        if (customerUpdate) {
+            return res.status(200).json({message: "Customer data Updated"})
+        } else {
+            return res.status(404).json({message: "Data Not Found"})
+        }
+    } catch (error) {
+        return res.status(500).json({message: error})
     }
 }

@@ -120,3 +120,19 @@ if we want to know the changes in the current branch then "git status"
 if we want to ommit the required files then we can use the "git add (filepath)"
 if we want to commit the code in to the branch then we can use the "git commit -m "Random message" "
 if we want to push the code into the branch then we can use "git push"ok
+
+Event loop
+event loop allows node js to perform nonblocking input/ output/operations even if it is single thread data
+nodejs runs on a single threaded but it can take multiple request at a time and whatever the request gets completed those things returned paralally
+when we start the nodejs project it intializes the event loop
+
+
+Event Loop diagram
+timers (Ex:- Set time out functions)
+pending callbacks (Ex;- IPO operations)
+idle (Ex:- DataBase Connection)
+polls  (Ex:- I/O events)
+checks (Ex;- set immediate functions)
+closed callbacks   (Ex:- event emitters , socket.on)
+
+Evet loop executes the task from the callstack whenever the callstack is empty then only it will take the task from the event cube

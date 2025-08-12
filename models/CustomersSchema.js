@@ -18,6 +18,10 @@ password: {
 type: String,   
 trim: true
 },
+isActive: {
+    type: Boolean,
+    default: false
+}
 })
 
 module.exports = model("customers",customersSchema)
