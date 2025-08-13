@@ -128,12 +128,19 @@ nodejs runs on a single threaded but it can take multiple request at a time and 
 when we start the nodejs project it intializes the event loop
 
 
-Event Loop diagram
-timers (Ex:- Set time out functions)
-pending callbacks (Ex;- IPO operations)
-idle (Ex:- DataBase Connection)
-polls  (Ex:- I/O events)
-checks (Ex;- set immediate functions)
-closed callbacks   (Ex:- event emitters , socket.on)
-
+---------------------Event Loop Diagram-----------------------------------
+>>timers 
+    (Ex:- Set time out functions)
+>>pending callbacks 
+    (Ex;- IPO operations)
+>>idle 
+    (Ex:- DataBase Connection)
+>>polls 
+    (Ex:- I/O events)
+>>checks 
+    (Ex;- set immediate functions)
+>>closed callbacks   
+    (Ex:- event emitters , socket.on)
+-------------------------------------------------------------------
 Evet loop executes the task from the callstack whenever the callstack is empty then only it will take the task from the event cube
+-------------------------------------------------------------------
