@@ -6,6 +6,8 @@ messages,
 } = require("../constant/responseConstant")
 const customersSchema = require("../models/CustomersSchema")
 
+//CustomerSignup function
+
 exports.customerSignUp = async(req,res)=>{
     try { 
         console.log("testing", req.body)
@@ -22,6 +24,8 @@ exports.customerSignUp = async(req,res)=>{
 return "internal server error"
 }}
 
+//Customer Details update
+
 exports.customerUpdate = async(req,res) =>{
     try {
         // const update= await customersSchema.findOneAndUpdate({email: req.body.email},{$set:{name:'rahul'}},{new: true})
@@ -33,6 +37,8 @@ exports.customerUpdate = async(req,res) =>{
         console.log("Failed to Update")
     }
 }
+
+// Getting the customer Details
 
 exports.gEtDetails = async(req,res) => {
     try{
@@ -48,6 +54,8 @@ exports.gEtDetails = async(req,res) => {
     }catch (error) {
 return "internal server error"
 }}
+
+// Deleting the Details of the customer
 
 exports.deleteDetails = async(req,res) =>{
     try {
