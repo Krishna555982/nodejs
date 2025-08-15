@@ -102,7 +102,7 @@ exports.logoutUpdate = async (req,res) => {
             return res.status(400).json({message: "Email is required"})
         }
         const logoutUpdate = await CustomersSchema.findOneAndUpdate({email: req.body.email},{$set: {isOnline:false}}, {new: false})
-         console.log(logoutUpdate)
+        console.log(logoutUpdate)
         if (logoutUpdate) {
             return res.status(200).json({message: "Customer data Updated"})
         } else {
