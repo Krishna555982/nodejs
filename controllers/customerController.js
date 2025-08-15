@@ -101,9 +101,9 @@ exports.logoutUpdate = async (req,res) => {
         if (!req.body.email) {
             return res.status(400).json({message: "Email is required"})
         }
-        const logoutUpdate = await customerSchemaa.findOneAndUpdate({email: req.body.email},{$set: {isOnline:false}}, {new: false})
-         console.log(customerUpdate)
-        if (customerUpdate) {
+        const logoutUpdate = await CustomersSchema.findOneAndUpdate({email: req.body.email},{$set: {isOnline:false}}, {new: false})
+         console.log(logoutUpdate)
+        if (logoutUpdate) {
             return res.status(200).json({message: "Customer data Updated"})
         } else {
             return res.status(404).json({message: "Data Not Found"})
