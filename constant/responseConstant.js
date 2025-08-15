@@ -31,3 +31,5 @@ CREATE_SUCCESS_MSG: "No Data Available",
 VALIDATION_ERROR: "Validation Failed",
 COMMON_SERVER_ERROR: "Something went wrong, Please check",
 };
+
+module.exports= {responseStatus,statusCodes,messages}

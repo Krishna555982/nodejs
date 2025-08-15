@@ -98,13 +98,17 @@ exports.signinUpdate = async (req,res) => {
 
 exports.logoutUpdate = async (req,res) => {
     try {
+        console.log("Updated",req.body.email)
         if (!req.body.email) {
             return res.status(400).json({message: "Email is required"})
         }
-        const logoutUpdate = await CustomersSchema.findOneAndUpdate({email: req.body.email},{$set: {isOnline:false}}, {new: false})
-        console.log(logoutUpdate)
-        if (logoutUpdate) {
-            return res.status(200).json({message: "Customer data Updated"})
+        console.log("updated2")
+        // const logoutUpdate = await CustomersSchema.findOneAndUpdate({email: req.body.email},{$set: {isOnline:false}}, {new: true})
+        const customerUpdate = await customersSchema.findOneAndUpdate({email: req.body.email},{$set: {isActive:false}}, {new: true})
+        console.log(customerUpdate)
+        if (customerUpdate) {
+            console.log("Updated3")
+            return res.status(200).json({message: "Customer Logout Successfully"})
         } else {
             return res.status(404).json({message: "Data Not Found"})
         }

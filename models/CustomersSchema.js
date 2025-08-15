@@ -1,6 +1,5 @@
 
 const mongoose = require("mongoose");
-const { type } = require("os");
 const { Schema, model } = mongoose;
 const customersSchema = new Schema({
 name: {
@@ -22,10 +21,6 @@ trim: true
 isActive: {
     type: Boolean,
     default: false
-},
-isOnline: {
-    type: Boolean,
-    default: true
 }
 })
 

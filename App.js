@@ -13,7 +13,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 const customerRoutes = require("./Routes/route")
+const productsRoutes = require("./Routes/Productroutes")
 app.use("/api/customer",customerRoutes)
+app.use("/api/products",productsRoutes)
 
 
 app.listen(PORT, () => {
