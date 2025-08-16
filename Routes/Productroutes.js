@@ -4,4 +4,6 @@ const productController = require("../controllers/ProductControllers")
 
 router.post("/addProduct",productController.addProductDetails)
 
+router.put("updateProducts",productController.updateProducts)
+
 module.exports = router

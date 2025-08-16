@@ -17,4 +17,4 @@ const productSchema = new Schema({
         type: Boolean,
     }
 })
-Module.exports = model("Products", productSchema)
+module.exports = model("Products", productSchema)
