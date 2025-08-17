@@ -19,13 +19,29 @@ exports.addProductDetails = async(req,res) =>{
         return res.status(500).json({message: error})
     }
 }
-
+// Update Product Details in the Database
 exports.updateProducts = async(req,res) => {
     try {
         const update = await productSchema.findOneAndUpdate({homeAppliencesname: req.body.homeAppliencesname}, {$set: {price: req.body.price, Model: req.body.Model, Avalibility: req.body.Avalibility}}, {new: true})
-        console.log("Updated",updated)
+        console.log("Updated",update)
         return res.status(statusCodes.OK).json({message: "Product Details Updated Successfully"})
     } catch(error) {
         return res.status(500).json({message: error})
+    }
+}
+
+//Get Customer Details From the DataBase
+
+exports.getProductDetails = async(req,res) => {
+    try {
+        const getProductDetails = await productSchema.find({homeAppliencesname: req.body.homeAppliencesname})
+        console.log("Get Product Details",getProductDetails)
+        if(getProductDetails) {
+            return res.status(statusCodes.OK).json({message: getProductDetails})
+        } else {
+            return res.status(statusCodes.BAD_REQUEST).json({message: "There is No Data With the provided Details"})
+        }
+    } catch (error) {
+        return res.status(statusCodes.INTERNAL_SERVER_ERROR).json({message: "Internal Server Error"})
     }
 }
