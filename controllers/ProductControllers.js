@@ -9,7 +9,6 @@ const productSchema = require("../models/productSchema")
 
 exports.addProductDetails = async(req,res) =>{
     try {
-        console.log(req.body)
         const { homeAppliencesname , price , Model , Avalibility } = req.body;
         if(!homeAppliencesname || !price || !Model || !Avalibility) {
             return res.status(400).json({message: "Please Insert the Data"});
