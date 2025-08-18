@@ -17,3 +17,5 @@ const OrderSchema = new Schema ({
         type: String
     }
 })
+
+module.exports = model("Orders",OrderSchema)
