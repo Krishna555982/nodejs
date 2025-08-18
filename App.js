@@ -14,9 +14,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 const customerRoutes = require("./Routes/route")
 const productsRoutes = require("./Routes/Productroutes")
+const OrderRoutes = require("./Routes/OrderRoutes")
 app.use("/api/customer",customerRoutes)
 app.use("/api/products",productsRoutes)
-
+app.use("./api/Orders",OrderRoutes)
 
 app.listen(PORT, () => {
 console.log('Server running on http://localhost:',PORT);
