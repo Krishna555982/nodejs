@@ -28,7 +28,6 @@ return "internal server error"
 
 exports.customerUpdate = async(req,res) =>{
     try {
-        // const update= await customersSchema.findOneAndUpdate({email: req.body.email},{$set:{name:'rahul'}},{new: true})
         const update= await customersSchema.findOneAndUpdate({email: req.body.email},{$set:{name:req.body.name,mobileNumber:req.body.mobileNumber}},{new: true})
         console.log("updated",update)
         return update
