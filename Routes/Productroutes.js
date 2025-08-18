@@ -8,5 +8,6 @@ router.put("/updateProducts",productController.updateProducts)
 
 router.get("/getProductDetails",productController.getProductDetails)
 
+router.delete("/deleteProductDetails",productController.deleteProductDetails)
 
-module.exports = router
+module.exports = router;

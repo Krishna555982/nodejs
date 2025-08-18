@@ -5,6 +5,8 @@ messages,
 } = require("../constant/responseConstant")
 const productSchema = require("../models/productSchema")
 
+//Add Products Details to DataBase
+
 exports.addProductDetails = async(req,res) =>{
     try {
         console.log(req.body)
@@ -42,6 +44,26 @@ exports.getProductDetails = async(req,res) => {
             return res.status(statusCodes.BAD_REQUEST).json({message: "There is No Data With the provided Details"})
         }
     } catch (error) {
+        return res.status(statusCodes.INTERNAL_SERVER_ERROR).json({message: "Internal Server Error"})
+    }
+}
+
+// Deleting Product Details From DataBase
+
+exports.deleteProductDetails = async(req,res) => {
+    try {
+        if(req.body.homeAppliencesname) {
+            const deleteProductDetails = await productSchema.deleteOne({homeAppliencesname: req.body.homeAppliencesname})
+            console.log("The Data Is Deleted",deleteProductDetails)
+            if(deleteProductDetails.deletedCount == 1) {
+                return res.status(statusCodes.OK).json({message:"The Details Got Deleted"})
+            } else {
+                return res.status(statusCodes.NOT_FOUND).json({message: "No Data Found"})
+            }
+        } else {
+            return res.status(statusCodes.NOT_FOUND).json({message: "Home Applience Name is Not Found"})
+        }
+    }catch(error) {
         return res.status(statusCodes.INTERNAL_SERVER_ERROR).json({message: "Internal Server Error"})
     }
 }
