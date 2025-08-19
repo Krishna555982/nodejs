@@ -5,6 +5,7 @@ statusCodes,
 messages,
 } = require("../constant/responseConstant")
 const customersSchema = require("../models/CustomersSchema")
+const jwt = require("../utils/JSONWebToken")
 
 //CustomerSignup function
 
@@ -84,7 +85,9 @@ exports.signinUpdate = async (req,res) => {
         const customerUpdate = await customersSchema.findOneAndUpdate({email: req.body.email},{$set: {isActive:true}}, {new: true})
         console.log(customerUpdate)
         if (customerUpdate) {
-            return res.status(200).json({message: "Customer data Updated"})
+            const token = jwt.generateToken(req.body.email)
+            console.log(token)
+            return res.status(200).json({message: "Customer data Updated",data:token})
         } else {
             return res.status(404).json({message: "Data Not Found"})
         }
