@@ -1,4 +1,4 @@
-const Module = require("module");
+//const Module = require("module");
 const mongoose = require("mongoose")
 const {Schema, model} = mongoose
 const OrderSchema = new Schema ({
@@ -18,4 +18,4 @@ const OrderSchema = new Schema ({
     }
 })
 
-module.exports = model("Orders",OrderSchema)
+module.exports = OrderSchema;
