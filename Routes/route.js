@@ -4,15 +4,15 @@ const customerController = require("../controllers/customerController")
 const authenticate = require("../utils/Middleware")
 
 
-router.post('/customerSignup',customerController.customerSignUp)
+router.post('/customerSignup',authenticate,customerController.customerSignUp)
 
 router.put('/customerUpdate',authenticate,customerController.customerUpdate)
 
-router.get('/customerGetDetais',customerController.gEtDetails)
+router.get('/customerGetDetais',authenticate,customerController.gEtDetails)
 
-router.delete('/customerDelete',customerController.deleteDetails)
+router.delete('/customerDelete',authenticate,customerController.deleteDetails)
 
-router.put('/logoutUpdate',customerController.logoutUpdate)
+router.put('/logoutUpdate',authenticate,customerController.logoutUpdate)
 
-router.put('/signinUpdate',customerController.signinUpdate)
+router.put('/signinUpdate',authenticate,customerController.signinUpdate)
 module.exports = router;
