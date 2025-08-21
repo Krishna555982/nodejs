@@ -15,4 +15,4 @@ router.delete('/customerDelete',authenticate,customerController.deleteDetails)
 router.put('/logoutUpdate',authenticate,customerController.logoutUpdate)
 
 router.put('/signinUpdate',authenticate,customerController.signinUpdate)
-module.exports = router;
+module.exports = router; 
