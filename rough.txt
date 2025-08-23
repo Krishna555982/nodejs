@@ -182,7 +182,21 @@ promise.race method it will return the first settled promise wether it might res
 proise.any method will execute all the functions simultaneously
 but the promise.any will return the first resolved promise only
 
+--------------------------------------------------
+#########Closure 
+----------------------------------------------------
+>>Closure gives the access of outer function variable to an inner function
+>>closure remembers the outer function variable even after completing the execution of function
+
+----------------------------------------------------------
+CallBack Function
 --------------------------------------------------------
+>>call back fucntion is a function which is passed as an argument to another function
+>> in nodejs callback functions are widely used for asynchronous operationsex:- reading .txt files 
+>> insteed of waiting for a task to finish nodejs continues executing the code and
+     the call back function runs when the task completes 
+>>by using call back function we can prevent the blocking of code execution
+--------------------------------------------------------- 
 nodejs interview Questions
 ------------------------------------------------------
 >>what is nodejs?
@@ -196,4 +210,22 @@ ans:-
 >> what is deifference betwen packge.jSON and package-lock.json?
 ans:-
 >>> febinocci  series code?
+ans:-
+>>> what is use of typeof operator in javascript?
+ans:-
+>>>difference between var let const?
+ans:-
+>>>what is callback function?
+ans:-
+>>> what is closure?
+ans:-
+>>>what is difference between promise.all and promise.all settled?
+ans:-
+>>> Http StatusCodes?
+ans:-
+>>>array methods?
+ans:-
+>>>mongoDB Operators?
+ans:-
+>>> shallowcopy an deep copy?
 ans:-
