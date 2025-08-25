@@ -54,7 +54,7 @@ console.log(arr[position])
 if we want to know the length of array we can use this method
 console.log(arr.length)
 *---Push Method--
-if we want to insert the vue into the last index position we can use push method
+if we want to insert the value into the last index position we can use push method
 arr.push(value)
 *---pop Method---
 if we want to remove the last index position of array we can use the pop method
@@ -67,8 +67,8 @@ if we want to remove the first element from the array we can use the shift metho
 arr.shift()
 *---concat method---
 if we want to combine two single arrays to a single array we can use the contact method
-*---for ea(ch  method---
-if we get multipleof array inside the array based on the satisfyed condition we can able to delete/ add particcular indx position
+*---for each  method---
+if we get multipleof array inside the array based on the satisfyed condition we can able to delete/ add particcular index position
 *---for method ---
 whenever  we want to use the async and await keyword then we can use below method
 for(let number of arr){
@@ -76,14 +76,14 @@ console.log(numer);
 }
 *---Map Method---
 map method returns new array after performing  function on each element of the array and it does 
-*--- Index of method---)
+*--- Index of method---
 by using indexof method we can find the particular element of the index value
 *---Find Method---
 if we want to find the particular matched element inside the array of element we use find method
 *---includesofMethod---
 number.includes(4);
 *---sort Method---
-by using sort method we can able to arrange the numbers by asending or descending order
+by using sort method we can able to arrange the numbers by asending or descending order 
 *---split method---
 if we want to convert the string into array of elements then we can use split method
 
@@ -91,7 +91,7 @@ if we want to convert the string into array of elements then we can use split me
 #---Functions---
 a function is A block of code designed to perform a particular task. 
 by using functions we can reuse the functions
-when we pass the value into function is calling is called aurgument
+when we pass the value into function is called aurgument
 when we pass into function we call it as parameter
 *---annonymous function---
 the function without name is called the annonymous function
@@ -114,21 +114,24 @@ GET METHOD:-if we want to recive any data from database  we use get method
 PUT METHOD:- if we want to update mutiple feilds then we can use put method
 PATCH METHOD:- if we want to update one or two feilds we use patch method 
 DELETE METHOD:- if we want to delete any data then we can use delete method
-Git commands:-
+---------------------Git commands------------------------------------
+
 if we want to know the current branch then we cn use the command "git branch"
 if we want to know the changes in the current branch then "git status"
 if we want to ommit the required files then we can use the "git add (filepath)"
 if we want to commit the code in to the branch then we can use the "git commit -m "Random message" "
 if we want to push the code into the branch then we can use "git push"
 if we want to create new branch from the one branch we use "git checkout -b <branch name>"
-
+-------------------------------------------------------------------
 Event loop
+-------------------------------------------------------------------
 event loop allows node js to perform nonblocking input/ output/operations even if it is single thread data
 nodejs runs on a single threaded but it can take multiple request at a time and whatever the request gets completed those things returned paralally
 when we start the nodejs project it intializes the event loop
 
-
----------------------Event Loop Diagram-----------------------------------
+------------------------------------------------------------------
+Event Loop Diagram
+-------------------------------------------------------------------
 >>timers 
     (Ex:- Set time out functions)
 >>pending callbacks 
@@ -159,73 +162,199 @@ ex:- fs.readfile for reading the data from the batabase
 for avoiding the callback Hell we will use promises
 -----------------------------------------------------
 #######Promise.all
----------------------------------------------------------
+-----------------------------------------------------
 in the promise.all function all the functions will run paralally
 promise.all method will be resolved when all the promises got successed
 if any one promise got failed it will be rejected immedietly
 
 ----------------------------------------------------
 ###Promise.allSettled
-_____________________________________________________
+----------------------------------------------------
 
 promise.allSettled all the function will run paralally
 Promise.allSettled will execute promises wether it maight be resolved or rejected
 
 --------------------------------------------------
 Promise.race 
-_____________________________________________________
+--------------------------------------------------
 promise.race method will execute all the method paralally
 promise.race method it will return the first settled promise wether it might resolve or rejected
  ------------------------------------------------
  Promise.any
- -----------------------------------------------
+ ------------------------------------------------
 proise.any method will execute all the functions simultaneously
 but the promise.any will return the first resolved promise only
 
---------------------------------------------------
+----------------------------------------------------
 #########Closure 
 ----------------------------------------------------
 >>Closure gives the access of outer function variable to an inner function
 >>closure remembers the outer function variable even after completing the execution of function
-
 ----------------------------------------------------------
 CallBack Function
---------------------------------------------------------
+----------------------------------------------------------
 >>call back fucntion is a function which is passed as an argument to another function
->> in nodejs callback functions are widely used for asynchronous operationsex:- reading .txt files 
+>> in nodejs callback functions are widely used for asynchronous operations  EX:- reading '.txt' files 
 >> insteed of waiting for a task to finish nodejs continues executing the code and
      the call back function runs when the task completes 
 >>by using call back function we can prevent the blocking of code execution
 --------------------------------------------------------- 
 nodejs interview Questions
-------------------------------------------------------
+---------------------------------------------------------
 >>what is nodejs?
-ans:- 
+ans:- Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers
+ to execute JavaScript code outside of a web browser.
+
 >>what is npm?
-ans:-
+ans:-npm is node package manager which is also default package manager for javaScript runtime environment 
+
 ##>> what is event loop? and how it work?
 ans:-
+*   Event loop allows nodejs to perform nonblocking input/output/operations even if it is single thread data
+*   it is a singlr threaded but it can take multiple request at a time and what ever the request ges completed those thngs returned paralally
+*   event loopexecutes the tasks from the call stack whenever the callstack is empty then only it will take the tasks from the event cube
+*   Ex:- console.log("10")
+    setTimeout(() => {
+        console.log("20")
+    },500)
+    console.log("30")
+
 >> what is  difference between dependency  and dev dependency?
 ans:-
+Dependencies:-
+~> A dependency is a library that a project needs to function effectively
+~>If package doesnt already exist in the node_modules directory then it is autometically added
+~>These are the libraries we need when we run our code
+
+DevDependencies:-
+~>DevDependencies are the packages that we need during the development
+~>As we install a package, npm wil autometically install the dev dependency
+~>These Dependencies are needed at some point during the development process, but not during execution
+
 >> what is deifference betwen packge.jSON and package-lock.json?
 ans:-
+Package.json
+=>It defines a data related to project data(MetaData),Scripts, and declares the project's direct Dependencies
+and their versions
+=>it is developed manually by developers or creaated using "npm init"
+=>contains info related to Dependenciesand their versions and info related to project
+
+Package-lock.json
+=>this file ensures deterministics installations by "locking" the exact versions of all installed packages
+including sub-Dependencies and their resolved locations. this gurantees that npm install will always produce the same node_modules structure regardless of when or where its executed
+=>it is autometically generated and updated by npm when npm install or other dependency modifyinf commands are executed
+=> it contains detailed hierarchical representation of the entire dependency tree including the version, source, and intergrity hash for every package
+
 >>> febinocci  series code?
 ans:-
+fucntion feb (n) {
+    if (n<=1){
+        return [];
+    }
+    if (n===1){
+        return[0];
+    }
+    const arr = [0, 1];
+    for (let i=2; i<n; i++ ){
+        arr.push(arr[i-1] + arr[i-2]);
+    }
+    return arr;
+}
+console.log(feb(10));
+
 >>> what is use of typeof operator in javascript?
-ans:-
+ans:- If we want to get to know the data type then we can use "type of" operator
+
 >>>difference between var let const?
 ans:-
+VAR:declares variables  with function or global scope and allows re-declare and update within the same scope
+LET:Declares variable with block scope allowing updates but not re-declaration within the same scope
+CONST: Declares block-scoped variables that cannot be reassigned after their intial assignments
+
 >>>what is callback function?
 ans:-
+it is a function which is passes as an argument to another function
+in nodejs callback functions  are widely used for asynchronous operations like reading '.txt' files
+insteed of waiting for a task to finish nodejs continues executing the code and the callback fucntion runs
+when the task completes and also by using function we can  prvent the blocking of the code execution
+
 >>> what is closure?
 ans:-
+closure gives the access of outer fucntion variable to an inner function
+closure remembers the outer function variable even after completing the execution of a function 
+
 >>>what is difference between promise.all and promise.all settled?
 ans:-
+promise.all:
+promise.all all function runs paralally and in promise.all it executes if all the methods get resolved 
+and if any one is failed then it will givr error
+
+promise.allSettled:
+in promise.allSettled all the functions runs paralally and in promise.allSettled it executes 
+wether all the methods get resolved or rejected it executes all the function
+
 >>> Http StatusCodes?
 ans:-
+200 - ok
+201 - created
+202 - acccepted 
+204 - no_content
+400 - bad_request
+401 - unauthorized
+403 - forbidden
+404 - not_found
+409 - conflict
+500 - internal_server_error
+502 - bad_gateway
+503 - service_unavailable
+
 >>>array methods?
-ans:-
+ans:-array is also a variable which can hold more then one value
+position method:
+array can hold multiple values and we can access those values by referring the index position (ex: console.log(arr.length))
+push method:
+if we want insert the value into last index position we can use the push method (EX: arr.push(value))
+pop method:
+if we want to remove the last index position of an array we can use pop method (EX:- arr.pop())
+unshift  method:
+if we want to add the first index position of the array we  can use "unshift method"(EX:- arr.unshift(value))
+shift method:
+if we want to remove the first element form the array then we can use "shift method" (EX:- arr.shift())
+concat method:
+if we want to combine the two single arrays into one single array then we can use concat method (EX:- const arrays = arr1.cocnat(arr2))
+forEach method:
+if we get multipleof array inside the array based on the satisfyed condition we can able to delete/ add particcular index position
+for method:
+when ever we want  to use the async and await keyword then we can use for method (EX:- for(let number of arr){console.log(number)})
+map method:
+map method returns new array after performing function on each element of the array and it does
+indexof method:
+by using index of method we can find the particular element inside the array of element we use find method
+includesofMethod:
+if we want to find the array which include the given value then we use includesofMethod
+sort method:
+by using sort method we can be able to arrange the numbers by asending or descending order
+split method:
+if we want to convrt the string into array of elements then we can use split method
+slicemethod:
+????????????????????????????
+
 >>>mongoDB Operators?
 ans:-
+post method: when we want to insert  any data in database we use post method
+get method: when we want to recive any data from the database we use get method
+put method: if we want to update multiple fields then we use put method
+patch method: if we want to update one or two fields we use patch method
+delete method: if we want to delete any data then we can use delete method
+
 >>> shallowcopy an deep copy?
 ans:-
+shallowcopy:
+=> copies only the first level of the object/array
+=>nested objects/ arrays are still references to the original
+=>Changes in nested values affect both the original and the copy
+
+DeepCopy:
+=>Creates a completely independent copy of the object/array,including all neste levels
+=>no references are shared with the original
+=>changes in the copy do not effect the original
