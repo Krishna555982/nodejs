@@ -310,41 +310,59 @@ ans:-
 
 >>>array methods?
 ans:-array is also a variable which can hold more then one value
+
 position method:
 array can hold multiple values and we can access those values by referring the index position (ex: console.log(arr.length))
+
 push method:
 if we want insert the value into last index position we can use the push method (EX: arr.push(value))
+
 pop method:
 if we want to remove the last index position of an array we can use pop method (EX:- arr.pop())
+
 unshift  method:
 if we want to add the first index position of the array we  can use "unshift method"(EX:- arr.unshift(value))
+
 shift method:
 if we want to remove the first element form the array then we can use "shift method" (EX:- arr.shift())
+
 concat method:
 if we want to combine the two single arrays into one single array then we can use concat method (EX:- const arrays = arr1.cocnat(arr2))
+
 forEach method:
 if we get multipleof array inside the array based on the satisfyed condition we can able to delete/ add particcular index position
+
 for method:
 when ever we want  to use the async and await keyword then we can use for method (EX:- for(let number of arr){console.log(number)})
+
 map method:
 map method returns new array after performing function on each element of the array and it does
+
 indexof method:
 by using index of method we can find the particular element inside the array of element we use find method
+
 includesofMethod:
 if we want to find the array which include the given value then we use includesofMethod
+
 sort method:
 by using sort method we can be able to arrange the numbers by asending or descending order
+
 split method:
 if we want to convrt the string into array of elements then we can use split method
+
 slicemethod:
 ????????????????????????????
 
 >>>mongoDB Operators?
 ans:-
 post method: when we want to insert  any data in database we use post method
+
 get method: when we want to recive any data from the database we use get method
+
 put method: if we want to update multiple fields then we use put method
+
 patch method: if we want to update one or two fields we use patch method
+
 delete method: if we want to delete any data then we can use delete method
 
 >>> shallowcopy an deep copy?
