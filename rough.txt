@@ -242,7 +242,7 @@ and their versions
 Package-lock.json
 =>this file ensures deterministics installations by "locking" the exact versions of all installed packages
 including sub-Dependencies and their resolved locations. this gurantees that npm install will always produce the same node_modules structure regardless of when or where its executed
-=>it is autometically generated and updated by npm when npm install or other dependency modifyinf commands are executed
+=>it is autometically generated and updated by npm when npm install or other dependency modifying commands are executed
 => it contains detailed hierarchical representation of the entire dependency tree including the version, source, and intergrity hash for every package
 
 >>> febinocci  series code?
@@ -276,7 +276,7 @@ ans:-
 it is a function which is passes as an argument to another function
 in nodejs callback functions  are widely used for asynchronous operations like reading '.txt' files
 insteed of waiting for a task to finish nodejs continues executing the code and the callback fucntion runs
-when the task completes and also by using function we can  prvent the blocking of the code execution
+when the task completes and also by using function we can  prevent the blocking of the code execution
 
 >>> what is closure?
 ans:-
@@ -287,7 +287,7 @@ closure remembers the outer function variable even after completing the executio
 ans:-
 promise.all:
 promise.all all function runs paralally and in promise.all it executes if all the methods get resolved 
-and if any one is failed then it will givr error
+and if any one is failed then it will give error
 
 promise.allSettled:
 in promise.allSettled all the functions runs paralally and in promise.allSettled it executes 
@@ -321,7 +321,7 @@ pop method:
 if we want to remove the last index position of an array we can use pop method (EX:- arr.pop())
 
 unshift  method:
-if we want to add the first index position of the array we  can use "unshift method"(EX:- arr.unshift(value))
+if we want to add the value to the first index position of the array we  can use "unshift method"(EX:- arr.unshift(value))
 
 shift method:
 if we want to remove the first element form the array then we can use "shift method" (EX:- arr.shift())
@@ -373,6 +373,6 @@ shallowcopy:
 =>Changes in nested values affect both the original and the copy
 
 DeepCopy:
-=>Creates a completely independent copy of the object/array,including all neste levels
+=>Creates a completely independent copy of the object/array,including all nested levels
 =>no references are shared with the original
 =>changes in the copy do not effect the original
