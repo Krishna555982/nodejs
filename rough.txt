@@ -371,7 +371,7 @@ patch method: if we want to update one or two fields we use patch method
 
 delete method: if we want to delete any data then we can use delete method
 
->>> shallowcopy an deep copy?
+>>> shallowcopy and deep copy?
 ans:-
 shallowcopy:
 => copies only the first level of the object/array
