@@ -72,7 +72,7 @@
 // arr.shift()
 // const arrays = arr1.concat(arr2)
 // console.log(arrays)
-//
+
 // for( i=0; i<=arr.length; i++)
 //     {
 //     console.log(i)
@@ -80,7 +80,7 @@
 // arr.forEach(element => {
 //     console.log(element)
 // })
-//
+
 // arr.forEach((element,index)=>{
 //     if (element == 5) {
 //         delete arr[index]
@@ -91,29 +91,29 @@
 // for(let number of arr){
 // console.log(numer);
 // }
-//
+
 // const numberArr = [1,2,3,4,5,6,7,8,9,10]
 // let a = numberArr.map(value=>{
 // return value*2;
 // })
 // console.log(a)
-//
+
 // const objarr = [{name: 'naven', tech: "nodejs"},{name: 'Krishna', tech: "java"}]
 // objarr.forEach(value=>{
 //     if(value.name == "naven")
 // console.log(value);
 // })
-//
+
 // let numbers = [1,2,3,4,5,6,7,8]
-//
+
 // console.log(numbers.indexOf(1));
-//
+
 // const data = [{name:'Krishna', tech:"java"},{name:'Naven', tech:"node.js"}]
 // let value = data.find(ele=>ele.name = 'Krishna')
 // console.log(value)
 // const numbers = [1,2,3,4,5,6]
 // console.log(numbers.includes(!4))
-//
+
 // const number = [5,2,6,8,2,1]
 // console.log(number.sort())
 // let name = 'wow'
@@ -123,7 +123,7 @@
 // name2.forEach (element => {
 //     console.log(name2)
 // })
-//
+
 // function greetings (name,age) // function name and parameter
 // {
 //     return "hello "+ name+" My age is "+age
@@ -211,7 +211,7 @@
 //     });
 // })
 //
-//Promise.race
+// Promise.race
 //
 // const promise1 =  Promise.reject("Krishna");
 // const promise2 = Promise.resolve("Rahul");
@@ -263,8 +263,11 @@
 //
 //febinocci series
 // function febinocci (n) {
-//     if (n <= 1) return [];
-//     if (n === 1) return [0];
+//     if (n <= 1) {
+//         return [];
+//     }
+//     if (n === 1) {return [0];
+//     }
 //     const arr = [0, 1];
 //     for (let i = 2; i < n; i++) {
 //         arr.push(arr[i - 1] + arr[i - 2]);
