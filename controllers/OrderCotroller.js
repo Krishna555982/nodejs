@@ -24,7 +24,7 @@ exports.addOrderDetails = async(req,res) =>{
 exports.updateOrderDetails = async(req,res) => {
     try {
         const update = await OrderSchema.findOneAndUpdate({ItemName: req.body.ItemName}, {$set: {OrderStatus: req.body.OrderStatus}}, {new: true})
-        console.log("Updated",update)
+        console.log(update)
         return res.status(statusCodes.OK).json({message: "Order Details Updated Successfully"})
     } catch(error) {
         return res.status(statusCodes.INTERNAL_SERVER_ERROR).json({message: error})
